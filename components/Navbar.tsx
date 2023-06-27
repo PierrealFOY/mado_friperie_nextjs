@@ -43,16 +43,16 @@ const Navbar = () => {
 
 
     return (
-        <header className='w-full mx-auto px-4 sm:px-20 sticky top-0 z-10 bg-transparent'>
-            <div className='mx-3 justify-between md:items-center md:flex'>
-                <div>
+        <header className='md:hover:border-b-2 md:shadow  md:hover:shadow-orange-500 w-full mx-auto px-4 sm:px-20 sticky top-0 z-10 bg-transparent'>
+            <div className='mx-3 justify-between items-center md:flex'>
+
                     <div className='flex items-center justify-between py-3'>
                         <Image 
                             className='rounded-full'
                             src="/../public/images/logo_friperie.jpg" 
                             alt=''   
-                            width={110}              
-                            height={110}              
+                            width={100}              
+                            height={100}              
                         />
                     </div>
 
@@ -80,13 +80,13 @@ const Navbar = () => {
                     <div
                         className={'flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ' + (burgerMenu ? 'block' : 'hidden')}
                     >
-                        <div className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
+                        <div className='items-center justify-end space-y-8 md:flex md:space-x-6 md:space-y-0'>
                             {
                                 navItems.map((item, id) => (
                                     <Link 
                                         key={id}
                                         href={item.page}
-                                        className='block lg:inline-block text-neutral-800 dark:text-neutral-400 hover:text-neutral-500 hover:scale-125 dark:hover:text-neutral-100'
+                                        className='text-lg block lg:inline-block text-neutral-800 dark:text-neutral-400 hover:text-neutral-500 hover:scale-125 dark:hover:text-neutral-100'
                                     >
                                         {item.label}
                                     </Link>
@@ -116,7 +116,6 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </header>
     )
 }
