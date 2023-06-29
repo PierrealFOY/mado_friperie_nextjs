@@ -51,7 +51,7 @@ const Navbar = () => {
     return (
         <header className='md:hover:border-b-2 md:shadow  md:hover:shadow-orange-500 w-full mx-auto px-4 sm:px-20 sticky top-0 z-10 bg-transparent'>
             <div className='mx-3 justify-between items-center md:flex'>
-                    <div className='flex items-center justify-between py-3'>
+                    <div className='transition duration-1000 ease-in-out hover:rotate-180 flex items-center justify-between py-3'>
                         <Image 
                             className='rounded-full'
                             src="/../public/images/logo_friperie.jpg" 
