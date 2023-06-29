@@ -1,27 +1,28 @@
 "use client"
 import React from 'react'
 import Image  from "next/image"
+import Carousel from './Carousel';
 
 // Library to make a gallery / caroussel of images
-import ImageGallery from 'react-image-gallery';
+// import { Carousel as CarouselNpmComponent} from 'react-responsive-carousel';
 
 
 // Array of objects
 const images = [
     {
-        link:"/../public/images/image_gallery1.jpg",
+        image:"/../public/images/image_gallery1.jpg",
         id: 1
     },
     {
-        link:"/../public/images/image_gallery2.jpg",
+        image:"/../public/images/image_gallery2.jpg",
         id: 2
     },
     {
-        link:"/../public/images/image_gallery3.jpg",
+        image:"/../public/images/image_gallery3.jpg",
         id: 3
     },
     // {
-    //     link:"/../public/images/image_gallery2.jpg",
+    //     image:"/../public/images/image_gallery2.jpg",
     //     id: 2
     // },
 ]
@@ -33,23 +34,25 @@ const News = () => {
                 <h1 className="my-6 text-center font-bold text-4xl text-black">Les dernières nouveautés</h1>
             </div>
             <div className='flex flex-row space-x-3'>
-                {
-                    images.map((image, id) => {
-                        return (
-                            <div key={id}>
-                                <div> 
-                                    <Image 
-                                        src={image.link}
-                                        alt=""
-                                        width={200}
-                                        height={200}
-                                        className={"rounded-xl shadow-xl hover:opactity-60"}
-                                    />
+                <Carousel >
+                    {
+                        images.map((image) => {
+                            return (
+                                <div key={image.id}>
+                                    <div> 
+                                        <Image 
+                                            src={image.image}
+                                            alt=""
+                                            width={200}
+                                            height={200}
+                                            className={"rounded-xl shadow-xl hover:opactity-60"}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })
-                }
+                            )
+                        })
+                    }
+                </Carousel>
             </div>
         </section>  
     )
