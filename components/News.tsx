@@ -1,11 +1,10 @@
 "use client"
 import React from 'react'
 import Image  from "next/image"
-import Carousel from './Carousel';
 
 // Library to make a gallery / caroussel of images
-// import { Carousel as CarouselNpmComponent} from 'react-responsive-carousel';
-
+import { Carousel, IconButton } from "@material-tailwind/react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
 
 // Array of objects
 const images = [
@@ -29,24 +28,53 @@ const images = [
 
 const News = () => {
     return (
-        <section className="my-8 pb-18 md:pt-16 md:pb-30">
-            <div>
-                <h1 className="my-6 text-center font-bold text-4xl text-black">Les dernières nouveautés</h1>
+        <section className="flex flex-col my-8 pb-18 md:pt-16 md:pb-30">
+            <div className='w-1/2 self-center '>
+                <h1 className="hover:animate-bounce my-6 text-center font-bold text-4xl text-black">Les dernières nouveautés</h1>
             </div>
-            <div className='flex flex-row space-x-3'>
-                <Carousel >
+            <div className='md:w-2/4 md:mx-auto mx-auto'>
+                <Carousel transition={{ duration: 2 }}
+                    className="rounded-xl"
+                    prevArrow={({ handlePrev }) => (
+                    <IconButton
+                        variant="text"
+                        color="white"
+                        size="lg"
+                        onClick={handlePrev}
+                        className="!absolute top-1/4 -translate-y-2/4 !left-1 rounded-full"
+                    >
+                        <ArrowLeftIcon strokeWidth={2} className="w-6 h-6" />
+                    </IconButton>
+                    )}
+                    nextArrow={({ handleNext }) => (
+                    <IconButton
+                        variant="text"
+                        color="white"
+                        size="lg"
+                        onClick={handleNext}
+                        className="!absolute top-1/4 -translate-y-2/4 !right-1 rounded-full"
+                    >
+                        <ArrowRightIcon strokeWidth={2} className="w-6 h-6" />
+                    </IconButton>
+                        )}
+                >
                     {
                         images.map((image) => {
                             return (
-                                <div key={image.id}>
-                                    <div> 
-                                        <Image 
-                                            src={image.image}
-                                            alt=""
-                                            width={200}
-                                            height={200}
-                                            className={"rounded-xl shadow-xl hover:opactity-60"}
-                                        />
+                                <div 
+                                    className=""
+                                    key={image.id}
+                                >
+                                    <div className="md:px-2">
+                                        <div className=""> 
+                                            <Image 
+                                                src={image.image}
+                                                alt=""
+                                                width={400}
+                                                height={400}
+                                                className={"hover:shadow-lg hover:shadow-orange-500 h-full w-full object-cover rounded-xl shadow-xl hover:opactity-60"}                                                
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             )
