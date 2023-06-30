@@ -17,7 +17,7 @@ export default function RootLayout({
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
             <Image 
-                src="/../public/images/image_background-friperie.jpg" 
+                src="/image_background-friperie.jpg" 
                 alt=""
                 className=" top-0 z-0"
                 width={1600}
