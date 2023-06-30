@@ -7,12 +7,15 @@ import { useTheme } from 'next-themes'
 
 // Next Components
 import  Image  from "next/image"
-import  Link  from "next/link";
+// import  Link  from "next/link";
 
 // React Icons
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { CgMenuBoxed } from "react-icons/cg"
 import { AiOutlineCloseCircle } from "react-icons/ai"
+
+// React Modules
+import { Link as ScrollLink} from "react-scroll/modules";
 
 
 // Types 
@@ -88,13 +91,13 @@ const Navbar = () => {
                         <div className='items-center justify-end space-y-8 md:flex md:space-x-6 md:space-y-0'>
                             {
                                 navItems.map((item, id) => (
-                                    <Link 
+                                    <ScrollLink 
                                         key={id}
-                                        href={item.page}
+                                        to={item.page}
                                         className='text-lg block lg:inline-block text-neutral-800 dark:text-neutral-400 hover:text-neutral-500 hover:scale-125 dark:hover:text-neutral-100'
                                     >
                                         {item.label}
-                                    </Link>
+                                    </ScrollLink>
                                 )
                             )}
                             {/*
