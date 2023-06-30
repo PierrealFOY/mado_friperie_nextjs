@@ -9,27 +9,27 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
 // Array of objects
 const images = [
     {
-        image:"/../public/images/image_gallery1.jpg",
+        image:"/image_gallery1.jpg",
         id: 1
     },
     {
-        image:"/../public/images/image_gallery2.jpg",
+        image:"/image_gallery2.jpg",
         id: 2
     },
     {
-        image:"/../public/images/image_gallery3.jpg",
+        image:"/image_gallery3.jpg",
         id: 3
     },
     {
-        image:"/../public/images/image_gallery4.jpg",
+        image:"/image_gallery4.jpg",
         id: 4
     },
     {
-        image:"/../public/images/image_gallery5.jpg",
+        image:"/image_gallery5.jpg",
         id: 5
     },
     // {
-    //     image:"/../public/images/image_gallery2.jpg",
+    //     image:"/image_gallery2.jpg",
     //     id: 6
     // },
 ]
