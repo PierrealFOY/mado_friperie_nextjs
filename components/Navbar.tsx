@@ -54,7 +54,7 @@ const Navbar = () => {
                     <div className='transition duration-1000 ease-in-out hover:rotate-180 flex items-center justify-between py-3'>
                         <Image 
                             className='rounded-full'
-                            src="/../public/images/logo_friperie.jpg" 
+                            src="/logo_friperie.jpg" 
                             alt=''   
                             width={100}              
                             height={100}              
