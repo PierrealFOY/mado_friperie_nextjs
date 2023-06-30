@@ -1,9 +1,12 @@
 "use client"
 import '../styles/globals.css'
-import { ThemeProvider } from 'next-themes'
-import { Goblin_One } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Image  from "next/image";
+import Footer from "@/components/Footer"
+
+// Import des modules next
+import { ThemeProvider } from 'next-themes'
+import { Goblin_One } from 'next/font/google'
 
 
 export default function RootLayout({
@@ -29,6 +32,7 @@ export default function RootLayout({
                 // priority={true}
             />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
