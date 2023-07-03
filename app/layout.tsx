@@ -29,8 +29,9 @@ export default function RootLayout({
                 // Je peux ajouter le prop fill={true} en dessous : 
                 // l'image remplira automatiquement l'espace du parent
                 // fill={true}
-                // priority={true}
-            />
+                placeholder="blur"
+                blurDataURL={'/image_background-friperie.jpg'}            
+              />
           {children}
           <Footer />
         </ThemeProvider>

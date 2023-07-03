@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa"
 import { GrInstagram } from "react-icons/gr" 
 import { RxAvatar } from "react-icons/rx" 
 import { SiGmail } from "react-icons/si" 
+import { RxAvatar } from "react-icons/rx" 
 import Link from 'next/link'
 
  
@@ -31,7 +32,7 @@ export default function SimpleFooter() {
                             className="hover:animate-bounce"
                         />
                     </a>
-                    <a href="https://www.instagram.com/madofriperie/" target="_blank" >
+                    <a href="https://www.instagram.com/madofriperie/" target="_blank">
                         <GrInstagram 
                             size={30}
                             className="hover:animate-bounce"
