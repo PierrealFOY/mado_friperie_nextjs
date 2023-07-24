@@ -27,6 +27,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+Le site est déployé à l'aide de Vercel, hebergeur d'applications web côté client (React, Next...). Je développe sur les branches spécifiques aux fonctionnalités et commit sur celles-ci. Ensuite, je teste en local les modifications et si tout est OK, je push sur la branche main. La branche main est automatiquement mise à jour avec Vercel car elle est paramétrée comme branche par défaut. Ainsi, je n'ai pas à build (compiler) puis déployer depuis le terminal. Les droits du repository depuis GitHub sont accordés pour Vercel. Si erreur lors su déploiement, je peux, depuis la dashboard de Vercel, consulter les journaux pour avoir des informations sur l'origine de ces conflits.
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
