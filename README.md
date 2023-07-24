@@ -1,15 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### Mado Friperie est le site vitrine d'une boutique située à Auray, en Bretagne ( 56 ). Le projet est actuellement en cours de développement et il est codé avec React ( côté client ) mais aussi Material UI, Tailwind, NextJs. Il s'agit d'une application web responsive, accessible sur format mobile et desktop, paramétré avec des breakpoints (Tailwind). Le site est déployé avec Vercel. 
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
