@@ -4,9 +4,9 @@ import ContactForm from '@/components/contact/ContactForm';
 function ContactSection () {
     return (
 
-        <section>
+        <section id="contact" className="flex justify-center px-4 md:my-12 md:pt-10 my-6 pt-7">
             <div>
-                <ContactForm/>
+                <ContactForm />
             </div>
         </section>
     );
