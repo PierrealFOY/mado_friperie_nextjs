@@ -1,6 +1,7 @@
 import Head  from "next/head";
 import News from '@/components/News';
 import AboutSection from '@/components/AboutSection';
+import ContactSection from '@/components/contact/ContactSection';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <News />
       <AboutSection />
+      <ContactSection />
     </main>
   )
 }
