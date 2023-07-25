@@ -17,7 +17,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 function AboutSection() {
     return (
-        <section id="about" className="flex justify-center px-4 md:my-12 md:pt-10">
+        <section id="about" className="flex justify-center px-4 md:my-12 md:pt-10 my-6 pt-7">
             <Card className="flex-row w-full max-w-[48rem]">
                 <CardHeader shadow={false} floated={false} className="w-2/5 shrink-0 m-0 rounded-r-none">
                     <img 
