@@ -14,8 +14,8 @@ export default function Home() {
           <title className="text-black"> Friperie Mado </title>
         </Head>
       </div>
-      <News />
       <AboutSection />
+      <News />
       <ContactSection />
     </main>
   )
