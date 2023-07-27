@@ -20,9 +20,9 @@ export default function RootLayout({
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
             <Image 
-                src="/image_background-friperie.jpg" 
+                src="/image-accueil-haut-Copie.jpg" 
                 alt=""
-                className=" top-0 z-0"
+                className=" top-0 z-0 h-100"
                 width={1600}
                 height={500}
                 // En commentant le width et height qui sont obligatoires
@@ -30,7 +30,7 @@ export default function RootLayout({
                 // l'image remplira automatiquement l'espace du parent
                 // fill={true}
                 placeholder="blur"
-                blurDataURL={'/image_background-friperie.jpg'}            
+                blurDataURL={'/image-accueil-haut-Copie.jpg'}            
               />
           {children}
           <Footer />

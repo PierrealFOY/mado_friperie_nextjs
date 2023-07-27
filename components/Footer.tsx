@@ -1,7 +1,5 @@
-import { Typography } from "@material-tailwind/react";
 import { FaFacebook } from "react-icons/fa" 
 import { GrInstagram } from "react-icons/gr" 
-import { RxAvatar } from "react-icons/rx" 
 import { SiGmail } from "react-icons/si" 
 import { RxAvatar } from "react-icons/rx" 
 import Link from 'next/link'
