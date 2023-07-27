@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client"
 /* eslint-disable react/no-unescaped-entities */
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react";
 import axios from 'axios';
 
@@ -27,6 +27,26 @@ const ContactForm = () => {
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
     const [submitted, setSubmitted] = useState(false)
+    const [contacts, setContacts] = useState([])
+
+    useEffect(() => {
+        fetchContacts();
+    }, []);
+
+
+    // Les 2 fonctions ne peuvent pour l'instant pas donner de résultats car il n'y a pas d'API côté serveur
+    // fonction pour venir récupérer les contacts 
+    const fetchContacts = () => {
+        axios({
+            method: 'GET',
+            url: 'api/contacts',
+        }).then((response) => {
+            // on met à jour le state avec les nouvelles données reçues
+            setContacts(response.data);
+        }).catch((error) => {
+            console.log('Error while getting the datas :', error);
+        });
+    };
 
     // fonction de soumission du formulaire
     const handleSubmit = (e: { preventDefault: () => void; }) => {
@@ -39,27 +59,6 @@ const ContactForm = () => {
             message
         }
 
-    //On appelle l'URL 'api/contact' que l'on viendra récupérer plus tard
-    // axios('api/contact', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Accept': 'application/json, text/plain, */*',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     // body: JSON.stringify(data)
-    // }).then((response) => {
-    //     console.log('Response received')
-    //     // on passe la soumission à true si le status de la requête est à 200 -> OK
-    //     if (response.status === 200) {
-    //         // on affiche un messsage de succès
-    //         console.log('Response succeeded')
-    //         setSubmitted(true)
-    //         setName("")
-    //         setFirstname("")
-    //         setEmail("")
-    //         setMessage("")
-    //     }
-    // })
     axios({
         url:'api/contact',
         method: 'POST',
