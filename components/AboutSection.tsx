@@ -30,6 +30,9 @@ function AboutSection() {
                     </Typography>
                     <Typography color="gray" className="font-normal mb-8 dark:text-white">
                         Horaires d'ouverture :
+                        <a className="flex flex-col">
+                            Mardi - Samedi : 10:30-12:30 / 14:00-18:30 
+                        </a>
                     </Typography>
                 </div>
                 <div className="w-1/3 m-0 rounded-r-none">
