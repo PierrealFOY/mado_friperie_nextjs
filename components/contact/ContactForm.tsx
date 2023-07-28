@@ -87,7 +87,6 @@ const ContactForm = () => {
     // }
 
     // Fonction pour envoyer des mails avec le package mail.js
-    // const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -101,21 +100,27 @@ const ContactForm = () => {
         );
     }
 
-
     return (
         <section className="">
             <Card color="transparent" shadow={false}>
-                <Typography variant="h4" color="blue-gray">
+                <Typography variant="h4" color="blue-gray" className="dark:text-white">
                     Prise de contact
                 </Typography>
-                <Typography color="gray" className="mt-1 font-normal">
+                <Typography color="gray" className="mt-1 font-normal dark:text-white">
                     Entrez vos coordonnées pour soumettre votre demande
                 </Typography>
                 <form onSubmit={sendEmail} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                     <div className="mb-4 flex flex-col space-y-4">
                         <Input size="lg" label="Nom" type="text" name="name" onChange={(e)=>{setName(e.target.value)}} />
                         <Input size="lg" label="Prénom" type="text" name="firstname" onChange={(e)=>{setFirstname(e.target.value)}} />
-                        <Input size="lg" className="h-auto mb-4 md:mb-0" label="Message" type="textarea" name="message" onChange={(e)=>{setMessage(e.target.value)}} />
+                        <textarea 
+                            id="message"
+                            // https://flowbite.com/docs/forms/textarea/#textarea-example
+                            // modification personalisée du textarea pour le rendre responsive avec
+                            //le bloc qui grandit en fonction du nombre de lignes
+                            className="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 "
+                            name="message" 
+                            onChange={(e)=>{setMessage(e.target.value)}} />
                         <Input size="lg" label="Email" type="mail" name="email" onChange={(e)=>{setEmail(e.target.value)}}/>
                     </div>
                     <Button 
