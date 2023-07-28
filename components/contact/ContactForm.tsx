@@ -87,7 +87,6 @@ const ContactForm = () => {
     // }
 
     // Fonction pour envoyer des mails avec le package mail.js
-    // const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -100,7 +99,6 @@ const ContactForm = () => {
             }
         );
     }
-
 
     return (
         <section className="">
@@ -115,7 +113,15 @@ const ContactForm = () => {
                     <div className="mb-4 flex flex-col space-y-4">
                         <Input size="lg" label="Nom" type="text" name="name" onChange={(e)=>{setName(e.target.value)}} />
                         <Input size="lg" label="Prénom" type="text" name="firstname" onChange={(e)=>{setFirstname(e.target.value)}} />
-                        <Input size="lg" className="h-auto mb-4 md:mb-0" label="Message" type="textarea" name="message" onChange={(e)=>{setMessage(e.target.value)}} />
+                        <textarea 
+                            id="message"
+                            // size="lg" 
+                            // className="block w-full mb-4 md:mb-0"
+                            className="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 "
+                            // label="Message" 
+                            // type="textarea" 
+                            name="message" 
+                            onChange={(e)=>{setMessage(e.target.value)}} />
                         <Input size="lg" label="Email" type="mail" name="email" onChange={(e)=>{setEmail(e.target.value)}}/>
                     </div>
                     <Button 
