@@ -36,7 +36,7 @@ const images = [
 
 const News = () => {
     return (
-        <section className="flex flex-col my-8 pb-18 md:pt-16 md:pb-30">
+        <section className="flex flex-col my-8 pb-18 md:pt-20 md:pb-30">
             <div className='w-1/2 self-center '>
                 <h1 className="hover:animate-bounce my-6 text-center font-bold text-4xl dark:text-white text-black">Les dernières nouveautés</h1>
             </div>

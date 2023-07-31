@@ -7,7 +7,6 @@ import { useTheme } from 'next-themes'
 
 // Next Components
 import  Image  from "next/image"
-// import  Link  from "next/link";
 
 // React Icons
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
