@@ -17,10 +17,10 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 function AboutSection() {
     return (
         <section id="about" className="flex justify-center px-4 md:my-12 md:pt-10 my-6 pt-7">
-            <div className="flex flex-row w-full max-w-3xl">
+            <div className="flex flex-row w-full max-w-3xl px-3">
                 <div className="w-2/3">
                     <Typography variant="h6" color="orange" className="uppercase mb-4">Quelques infos sur la boutique</Typography>
-                    <Typography variant="h4" color="blue-gray" className="mb-2 dark:text-white">
+                    <Typography variant="h4" color="blue-gray" className="pr-2 mb-2 dark:text-white">
                         Mado Friperie, c'est une boutique de seconde main, avec des articles vintage 
                         située en plein coeur d'Auray
                     </Typography>
