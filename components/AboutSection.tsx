@@ -24,7 +24,7 @@ function AboutSection() {
                         Mado Friperie, c'est une boutique de seconde main, avec des articles vintage 
                         située en plein coeur d'Auray
                     </Typography>
-                    <Typography color="gray" className="font-normal mb-8 dark:text-white">
+                    <Typography color="gray" className="font-normal pr-2 mb-8 dark:text-white">
                         Depuis janvier 2022, je me suis lancé dans un projet, un pari qui me tenait à coeur depuis longtemps:
                         ouvrir une frip' avec des produits de seconde main et de qualité, à petits prix.
                     </Typography>

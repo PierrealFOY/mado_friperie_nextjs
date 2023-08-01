@@ -89,15 +89,25 @@ const ContactForm = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm("service_4p2x22h", "template_i9unapo", e.target, "Zz8dV3rNB-P9vwckm").then(
+        emailjs.sendForm("service_4p2x22h", "template_i9unapo", e.target, "Zz8dV3rNB-P9vwckm")
+        .then(
             (result) => {
-                console.log(result.text);
+                console.log(result.text)
+                setSubmitted(true);
             },
             (error) => {
                 console.log(error.text);
             }
         );
     }
+
+    const resetForm = () => {
+        setName(""),
+        setFirstname(""),
+        setEmail(""),
+        setMessage(""),
+        setSubmitted(false)
+    };
 
     return (
         <section className="">
@@ -110,8 +120,24 @@ const ContactForm = () => {
                 </Typography>
                 <form onSubmit={sendEmail} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                     <div className="mb-4 flex flex-col space-y-4">
-                        <Input size="lg" label="Nom" type="text" name="name" onChange={(e)=>{setName(e.target.value)}} />
-                        <Input size="lg" label="Prénom" type="text" name="firstname" onChange={(e)=>{setFirstname(e.target.value)}} />
+                        <Input 
+                            size="lg" 
+                            label="Nom" 
+                            type="text" 
+                            name="name" 
+                            value={name}
+                            onChange={(e)=> setName(e.target.value)} 
+                            disabled={submitted}
+                        />
+                        <Input  
+                            size="lg" 
+                            label="Prénom" 
+                            type="text" 
+                            name="firstname" 
+                            value={firstname}
+                            onChange={(e)=>{setFirstname(e.target.value)}} 
+                            disabled={submitted}
+                        />
                         <textarea 
                             id="message"
                             // https://flowbite.com/docs/forms/textarea/#textarea-example
@@ -119,16 +145,34 @@ const ContactForm = () => {
                             //le bloc qui grandit en fonction du nombre de lignes
                             className="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 "
                             name="message" 
-                            onChange={(e)=>{setMessage(e.target.value)}} />
-                        <Input size="lg" label="Email" type="mail" name="email" onChange={(e)=>{setEmail(e.target.value)}}/>
+                            value={message}
+                            placeholder="Votre message"
+                            onChange={(e)=>{setMessage(e.target.value)}} 
+                            disabled={submitted}
+                        />
+                        <Input 
+                            size="lg" 
+                            label="Email" 
+                            type="mail" 
+                            name="email" 
+                            value={email}
+                            onChange={(e)=>{setEmail(e.target.value)}}
+                            disabled={submitted}
+                        />
                     </div>
                     <Button 
                         type="submit" 
                         className="mt-6" 
-                        fullWidth>
+                        fullWidth
+                        disabled={submitted}>
                         Envoyer
                     </Button>
                 </form>
+                {submitted && (
+                    <Typography variant="h6" color="blue-gray" className="dark:text-white" >
+                        Merci pour votre message !
+                    </Typography>
+                )}
             </Card>
         </section>
     );

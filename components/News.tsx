@@ -28,10 +28,6 @@ const images = [
         image:"/image_gallery5.jpg",
         id: 5
     },
-    // {
-    //     image:"/image_gallery2.jpg",
-    //     id: 6
-    // },
 ]
 
 const News = () => {
